@@ -21,8 +21,7 @@ public class Driver {
     store.push(new Num(10.05));
 
     store.push(new Str("Using some basic Annotations and Reflection, its easy to produce light-weight 'Spring-inspired' frameworks"));
-    store.push(new Str("I was inspired by the usage of annotations in Spring, and had to figure out exactly how they worked"));
-    store.push(new Str("This set won't print, even though it exists, and is properly built out, because @Data(print=false) "));
+    store.push(new Str("This set won't print, even though it exists, and is properly built out, because @DataSet(print=false) "));
 
     store.printSets();
 
