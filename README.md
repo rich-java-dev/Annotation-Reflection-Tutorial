@@ -1,9 +1,9 @@
 # Annotation-Reflection-Tutorial
-A basic implementation of a Data Store using Java Spring Framework inspired pattern.
+## A basic implementation of a Data Store using Java Spring Framework inspired pattern.
 
-The purpose of this example code is to demonstrate a novel design pattern using less than 200 lines of code.
+### The purpose of this example code is to demonstrate a novel design pattern using less than 200 lines of code.
 
-General Structure:
+### General Structure:
 * Annotations are a great tool, and really do behave as an extension of Interfaces:
   * They are used to tag (like zero method interfaces) other parts of code with meta-data.
   * Runtime RetentionPolicy allows Reflection classes to access these tags and handle the actual logic/meaning of the annotation
