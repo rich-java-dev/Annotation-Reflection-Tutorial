@@ -14,3 +14,15 @@ General Structure:
   * This style of coding prevents the requirement to create long if/else blocks to determine how to apply a common class (Data) to the respective Sets of different Data implementations
  
 
+Line Count of source files:
+
+$ git ls-files *.java | xargs wc -l
+   9 src/annote/DataSet.java
+  30 src/core/Driver.java
+   6 src/data/Data.java
+   8 src/data/Day.java
+  14 src/data/Num.java
+   8 src/data/Str.java
+  89 src/store/AbstractStore.java
+  35 src/store/Store.java
+ 199 total
