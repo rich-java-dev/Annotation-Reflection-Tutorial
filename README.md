@@ -1,7 +1,7 @@
 # Annotation-Reflection-Tutorial
 ## A basic implementation of a Data Store using Java Spring Framework inspired pattern.
 
-### The purpose of this example code is to demonstrate a novel design pattern using less than 200 lines of code.
+### The purpose of this example code is to demonstrate a novel design pattern using less than 200 lines of code!
 
 ### General Structure:
 * Annotations are a great tool, and really do behave as an extension of Interfaces:
@@ -21,7 +21,7 @@
 * The Data is pushed to the Store, and using Reflection assigns the Data to the proper Set/Collection, based on being 'tagged' by the Annotation '@DataSet'
   * This style of coding prevents the requirement to create long if/else blocks to determine how to apply a common class (Data) to the respective Sets of different Data extensions
 
-* Line Count of source files:
+### Line Count of source files:
   * git ls-files *.java | xargs wc -l
   * 11 src/annote/DataSet.java
   * 29 src/annote/FieldAnnoteProcessor.java
@@ -36,7 +36,9 @@
   * 199 total
 
 
-## Output of driver class (if unedited):
+
+
+### Output of driver class (if unedited [warning: order may change of elements within a given Set]):
 
  * strSet:
    * This code example demonstrates how to build custom Data Framworks
@@ -47,5 +49,5 @@
    * 1
 
  * daySet:
-   * 2019-10-24
-   * 1991-24-1
+ * 11/27/2019
+ * 1/1/2000
