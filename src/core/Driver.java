@@ -14,8 +14,8 @@ public class Driver {
     store.push(new Str("This code example demonstrates how to build custom Data Framworks"));
     store.push(new Str("Some techniques you'll see include: Reflection, Dependency Injection, Annotations, Lambda expressions/functional interfaces"));
 
-    store.push(new Day(1991, 24, 1));
-    store.push(new Day(2019, 10, 24));
+    store.push(new Day(2000, 1, 1));
+    store.push(new Day(2019, 11, 27));
 
     store.push(new Num(1));
     store.push(new Num(10.05));
