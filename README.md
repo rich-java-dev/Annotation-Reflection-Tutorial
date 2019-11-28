@@ -22,13 +22,16 @@
 
 * Line Count of source files:
   * git ls-files *.java | xargs wc -l
-  * 9 src/annote/DataSet.java
-  * 29 src/core/Driver.java
-  * 6 src/data/Data.java
+  * 11 src/annote/DataSet.java
+  * 29 src/annote/FieldAnnoteProcessor.java
+  * 8 src/annote/FieldProcess.java
+  * 26 src/core/Driver.java
+  * 4 src/data/Data.java
   * 8 src/data/Day.java
-  * 14 src/data/Num.java
-  *  8 src/data/Str.java
-  * 89 src/store/AbstractStore.java
-  * 35 src/store/Store.java
-  * 198 total
+  * 12 src/data/Num.java
+  * 8 src/data/Str.java
+  * 59 src/store/AbstractStore.java
+  * 34 src/store/Store.java
+  * 199 total
+
 
