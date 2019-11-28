@@ -22,7 +22,7 @@ public class Store extends AbstractStore {
   protected Set<Day> daySet = new HashSet<>();
 
   // Singleton pattern
-  private static Store instance = new Store();
+  private static final Store instance = new Store();
 
   private Store() {
     super(Store.class); // dependency injection
