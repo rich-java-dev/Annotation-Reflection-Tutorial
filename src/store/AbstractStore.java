@@ -14,20 +14,16 @@ public class AbstractStore {
     this.implClass = implClass;
   }
 
-  // Reflection Methods tying into Annotations
-
   /*
    * The following methods use dependency injection:
    * Instances of FieldAnnoteProcessor can simulate a functional interface by creating new instances and passing in an implementation of the interface "FieldProcess"
    * This is great because Classes (even abstract) cannot behave as interfaces/use lambda syntax. This however lets use lambdas by defining the interface seperately
-   * 
    */
 
   /**
    * Takes the provided object 'Data' which is a wrapper/container, determines
    * prevents having to use repetitive constructs such is "if instanceof A... else if instanceof B... else if instanceof C...
    * Iterates over the Fields of the implementing class, and determines which
-   * 
    */
   public void push(Data data) {
     // get a string reference to a 'Set' that would be the 'ideal container' for the given argument.
@@ -46,10 +42,10 @@ public class AbstractStore {
   public void printSets() {
     new FieldAnnoteProcessor().process(field -> {
       Set<Data> dataSet = (Set<Data>)field.get(this);
-      System.out.println(dataSet.getClass());
+      System.out.println(field.getName()); // print the Fields name (as defined in the implementing class)
       for(Data data : dataSet)
-        System.out.println(data.val);
-
+        System.out.println(data.val); // print the elements of the Set
+      System.out.println();
     }, implClass, DataSet.class);
   }
 
