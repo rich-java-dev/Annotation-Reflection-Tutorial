@@ -35,3 +35,16 @@
   * 199 total
 
 
+## Output of driver class (if unedited):
+
+ * strSet:
+   * This code example demonstrates how to build custom Data Framworks
+   * Some techniques you'll see include: Reflection, Dependency Injection, Annotations, Lambda expressions/functional interfaces
+
+ * numSet:
+   * 10.05
+   * 1
+
+ * daySet:
+   * 2019-10-24
+   * 1991-24-1
