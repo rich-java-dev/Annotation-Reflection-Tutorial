@@ -7,18 +7,19 @@
 * Annotations are a great tool, and really do behave as an extension of Interfaces:
   * They are used to tag (like zero method interfaces) other parts of code with meta-data.
   * Runtime RetentionPolicy allows Reflection classes to access these tags and handle the actual logic/meaning of the annotation
+  * Reflection is at the heart of this pattern design (Its the underlying mechanism that makes Annotations so powerful)
+* Dependency Injection allows defining 'template' code which is easily reusable
+  * Sometimes Abstract Classes do not give enough flexibility (Cannot behave as Functional Interfaces)
+  * We can define a Functional interface external to its 'implementing/called class'
 * Store is defined which extends behavior from an AbstractStore
   * This allows for cleanly separating the Data sets to be stored from the Annotation/Reflection methods
-  * Reflection is at the heart of this pattern design (Its the underlying mechanism that makes this possible
+  * The Store defines methods which create instances of a template class (not abstract), but allows dependency injection so we can conveniently use lambda expressions in its implementation
 * The Store passes its class definition to the AbstractStore (Dependency Injection) in order to get proper reference to the Implementing Class.
-  * This can be extended to behave with other Store implementations
-* Store implements a singleton pattern. This is not required but centralizes the Store/any class can access this single instance.
+  * This can be extended to behave with other AbstractStore implementations
+* Store uses a singleton pattern. This is not required but centralizes the Store/any class can access this single instance.
 * Wrapper data classes are defined, which gives a common base class (Data), and type for instances.
 * The Data is pushed to the Store, and using Reflection assigns the Data to the proper Set/Collection, based on being 'tagged' by the Annotation '@DataSet'
-  * This style of coding prevents the requirement to create long if/else blocks to determine how to apply a common class (Data) to the respective Sets of different Data implementations
-* Annotations are a great tool, and really do behave as an extension of Interfaces:
-  * They are used to tag (like zero method interfaces) other parts of code with meta-data.
-  * Runtime RetentionPolicy allows Reflection classes to access these tags and handle the actual logic/meaning of the annotation
+  * This style of coding prevents the requirement to create long if/else blocks to determine how to apply a common class (Data) to the respective Sets of different Data extensions
 
 * Line Count of source files:
   * git ls-files *.java | xargs wc -l
