@@ -12,13 +12,13 @@ public class Store extends AbstractStore {
   // Data Store/Collections
   // Important the Sets are not public in order to access them via the AbstractStore
 
-  @DataSet(print = false)
+  @DataSet
   protected Set<Str> strSet = new HashSet<>();
 
-  @DataSet(print = true)
+  @DataSet
   protected Set<Num> numSet = new HashSet<>();
 
-  @DataSet // print = true by default
+  @DataSet
   protected Set<Day> daySet = new HashSet<>();
 
   // Singleton pattern

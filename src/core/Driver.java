@@ -25,6 +25,10 @@ public class Driver {
 
     store.printSets();
 
+    store.clearSet();
+
+    store.printSets();
+
   }
 
 }
