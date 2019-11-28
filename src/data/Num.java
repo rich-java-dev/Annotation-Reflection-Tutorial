@@ -1,7 +1,5 @@
 package data;
 
-import java.math.BigDecimal;
-
 public class Num extends Data {
 
   public Num(int val) {

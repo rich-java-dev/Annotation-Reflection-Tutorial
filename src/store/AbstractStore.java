@@ -42,7 +42,7 @@ public class AbstractStore {
   public void printSets() {
     new FieldAnnoteProcessor().process(field -> {
       Set<Data> dataSet = (Set<Data>)field.get(this);
-      System.out.println(field.getName()); // print the Fields name (as defined in the implementing class)
+      System.out.println(field.getName() + ":"); // print the Fields name (as defined in the implementing class)
       for(Data data : dataSet)
         System.out.println(data.val); // print the elements of the Set
       System.out.println();
