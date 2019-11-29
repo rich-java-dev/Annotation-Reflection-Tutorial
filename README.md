@@ -1,7 +1,7 @@
 # Annotation-Reflection-Tutorial
 ## A basic implementation of a Data Store using a custom Annotation API template
 
-### This code is extensible/provides a easy-to-use API to use to implement all sorts of Annotations: Go Build your own Java frame-work!
+### This code is extensible/provides a easy-to-use API to build Annotations with Runtime context: Go Build your own Java frame-work!
 
 ### Structure:
 * annote Package:
