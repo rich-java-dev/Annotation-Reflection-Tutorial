@@ -1,7 +1,7 @@
 # Annotation-Reflection-Tutorial
-## A basic implementation of a Data Store using Java Spring Framework inspired pattern.
+## A basic implementation of a Data Store using a custom Annotation API template
 
-### The purpose of this example code is to demonstrate a novel design pattern using less than 200 lines of code!
+### This code is extensible/provides a easy-to-use API to use to implement all sorts of Annotations: Go Build your own Java frame-work!
 
 ### Structure:
 * annote Package:
@@ -39,15 +39,15 @@
 
 
 ### Line Count of source files:
- * git ls-files *.java | xargs wc -l
- * 44 src/annote/AnnoteProcessor.java
- * 13 src/annote/DataSet.java
- *  8 src/annote/FieldProcess.java
- *  8 src/annote/MethodProcess.java
- * 24 src/core/Driver.java
- * 67 src/store/AbstractStore.java
- * 33 src/store/Store.java
- * 197 total
+  * git ls-files *.java | xargs wc -l
+  * 44 src/annote/AnnoteProcessor.java
+  * 13 src/annote/DataSet.java
+  * 8 src/annote/FieldProcess.java
+  * 8 src/annote/MethodProcess.java
+  * 24 src/core/Driver.java
+  * 66 src/store/AbstractStore.java
+  * 33 src/store/Store.java
+  * 196 total
 
 ### Output of driver class (if unedited [warning: order may change of elements within a given Set]):
 
