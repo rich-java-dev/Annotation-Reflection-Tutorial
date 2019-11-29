@@ -10,14 +10,14 @@ public class AnnoteProcessor {
 	}
 
 	/**
-	 * @param process   Functional Interface, zero argument, the 'execution' when a
-	 *                  specific Annotation is found on a given Implementing Class's
-	 *                  field or method
-	 * @param implClass The Class which defines Fields tagged with the given
-	 *                  annotation
-	 * @param annote    The Annotation to look for in a given Implementing Class
+	 * 
+	 * @param implClass Class which defines Fields tagged with a given annotation
+	 * @param annote    Annotation to look for in a given implementing Class
+	 * @param process   Functional Interface: the 'executing code body' when a
+	 *                  specified Annotation is found on the given Implementing
+	 *                  Class's field or method
 	 */
-	public static void processFields(FieldProcess process, Class implClass, Class<? extends Annotation> annote) {
+	public static void processFields(Class implClass, Class<? extends Annotation> annote, FieldProcess process) {
 		for (Field field : implClass.getDeclaredFields()) {
 			if (field.isAnnotationPresent(annote)) {
 				try {
@@ -29,7 +29,7 @@ public class AnnoteProcessor {
 		}
 	}
 
-	public static void processMethods(MethodProcess process, Class implClass, Class<? extends Annotation> annote) {
+	public static void processMethods(Class implClass, Class<? extends Annotation> annote, MethodProcess process) {
 		for (Method method : implClass.getDeclaredMethods()) {
 			if (method.isAnnotationPresent(annote)) {
 				try {

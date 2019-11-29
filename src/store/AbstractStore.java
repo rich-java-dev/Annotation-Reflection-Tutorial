@@ -29,7 +29,7 @@ public class AbstractStore {
 			// argument.
 			final String dataTypeStr = String.format("java.util.Set<%s>", data.getClass().getName());
 
-			AnnoteProcessor.processFields(field -> {
+			AnnoteProcessor.processFields(implClass, DataSet.class, field -> {
 				final String fieldType = field.getGenericType().toString(); // Check data type
 
 				if (fieldType.equals(dataTypeStr)) {
@@ -39,30 +39,29 @@ public class AbstractStore {
 					dataSet.add(data);
 				}
 
-			}, implClass, DataSet.class);
+			});
 		}
 	}
 
 	public void printSets() {
-		AnnoteProcessor.processFields(field -> {
+		AnnoteProcessor.processFields(implClass, DataSet.class, field -> {
 			// Expecting that @DataSet is only used on Set<T>
 			Set<Object> dataSet = (Set<Object>) field.get(this);
+
 			if (field.getAnnotation(DataSet.class).printSet()) { // Do not print sets if printSet=False
 				System.out.println(field.getName() + ":"); // print the Field's name
 				for (Object data : dataSet)
 					System.out.println(data); // print the elements of the Set
 				System.out.println();
 			}
-
-		}, implClass, DataSet.class);
+		});
 	}
 
 	public void clearSet() {
-		AnnoteProcessor.processFields(field -> { // process method here
+		AnnoteProcessor.processFields(implClass, DataSet.class, field -> { // process method here
 			Set<Object> dataSet = (Set<Object>) field.get(this); // Expecting that @DataSet is only used on Set<T>
 			dataSet.clear();
-
-		}, implClass, DataSet.class);
+		});
 	}
 
 }
