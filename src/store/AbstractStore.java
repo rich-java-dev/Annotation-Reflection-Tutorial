@@ -18,7 +18,7 @@ public class AbstractStore {
 	/*
 	 * Instances of Functional interface (Field/Method Process)ares implemented by
 	 * an anonymous class via lambda expressions, then passed (injected) into the
-	 * AnnoteProcessor. 
+	 * AnnoteProcessor.
 	 */
 
 	/**
@@ -36,6 +36,7 @@ public class AbstractStore {
 
 				if (fieldType.equals(dataTypeStr)) {
 					// if match is found, get reference to the Store's/ Set.
+					// fairly safe, as string comparison has already been made against data type
 					Set<Object> dataSet = (Set<Object>) field.get(this);
 					dataSet.add(data);
 				}
@@ -46,7 +47,7 @@ public class AbstractStore {
 
 	public void printSets() {
 		AnnoteProcessor.processFields(field -> {
-			Set<Object> dataSet = (Set<Object>) field.get(this);
+			Set<Object> dataSet = (Set<Object>) field.get(this); // Expecting that @DataSet is only used on Set<T>
 			System.out.println(field.getName() + ":"); // print the Fields name (as defined in the implementing class)
 			for (Object data : dataSet)
 				System.out.println(data); // print the elements of the Set
@@ -56,7 +57,7 @@ public class AbstractStore {
 
 	public void clearSet() {
 		AnnoteProcessor.processFields(field -> { // process method here
-			Set<Object> dataSet = (Set<Object>) field.get(this);
+			Set<Object> dataSet = (Set<Object>) field.get(this); // Expecting that @DataSet is only used on Set<T>
 			dataSet.clear();
 
 		}, implClass, DataSet.class);
