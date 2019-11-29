@@ -5,18 +5,18 @@
 
 ### Structure:
 * annote Package:
- * AnnoteProcessor provides 2 static methods for applying 'behavior' of Annotations to implementing classes:
- * DataSet is the implemented Annotation used in these examples
- * FieldProcess/MethodProcess are functional interfaces injected into the AnnoteProcessor methods, defined in an external implementing class
+  * AnnoteProcessor provides 2 static methods for applying 'behavior' of Annotations to implementing classes:
+  * DataSet is the implemented Annotation used in these examples
+  * FieldProcess/MethodProcess are functional interfaces injected into the AnnoteProcessor methods, defined in an external implementing class
  
 * store Package:
- * AbstractStore defines basic implementations of the DataSet annotation using reflection.
+  * AbstractStore defines basic implementations of the DataSet annotation using reflection.
   * Uses dependency injection to get reference of the AbstractStore's specific implementation, giving access to the underlying class
   * Extensible enough to work with a variety of different Store implementations (Singleton vs. instance Stores for example)
- * Store is the basic implementation for this tutorial, using a singleton pattern design.
+  * Store is the basic implementation for this tutorial, using a singleton pattern design.
 
 * core Package:
- * Contains the driver of the program, and basic usage of the overall structure of the implementation
+  * Contains the driver of the program, and basic usage of the overall structure of the implementation
 
 ### Additional Comments:
 * Annotations are a great tool, and behave as an extension of Interfaces:
