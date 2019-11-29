@@ -1,27 +1,22 @@
 package core;
 
-import data.Day;
-import data.Num;
-import data.Str;
 import store.Store;
 
 public class Driver {
 
-  public static void main(String[] args) {
+	public static void main(String[] args) {
 
-    Store store = Store.getInstance();
+		Store store = Store.getInstance();
 
-    store.push(new Str("This code example demonstrates how to build custom Data Framworks"));
-    store.push(new Str("Some techniques you'll see include: Reflection, Dependency Injection, Annotations, Lambda expressions/functional interfaces"));
+		store.push("This code example demonstrates how to build custom Data Framworks");
+		store.push("Some techniques you'll see include: Reflection, Dependency Injection, Annotations, Lambda expressions/functional interfaces");
 
-    store.push(new Day(2000, 1, 1));
-    store.push(new Day(2019, 11, 27));
+		store.push(1.01, 1.02, 1.03); //
 
-    store.push(new Num(1));
-    store.push(new Num(10.05));
+		store.push(1, 2, 3, 4, 5, "another string"); // ints should go to intSet, while String to strSet
 
-    store.printSets();
-    store.clearSet();
-  }
+		store.printSets();
+		store.clearSet();
+	}
 
 }

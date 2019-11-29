@@ -1,35 +1,37 @@
 package store;
 
+import java.sql.Date;
 import java.util.HashSet;
 import java.util.Set;
 import annote.DataSet;
-import data.Day;
-import data.Num;
-import data.Str;
 
 public class Store extends AbstractStore {
 
-  // Data Store/Collections
-  // Important the Sets are not public in order to access them via the AbstractStore
+	// Data Store/Collections
+	// Important the Sets are not public in order to access them via the
+	// AbstractStore
 
-  @DataSet
-  protected Set<Str> strSet = new HashSet<>();
+	@DataSet
+	protected Set<String> strSet = new HashSet<>();
 
-  @DataSet
-  protected Set<Num> numSet = new HashSet<>();
+	@DataSet
+	protected Set<Integer> intSet = new HashSet<>();
 
-  @DataSet
-  protected Set<Day> daySet = new HashSet<>();
+	@DataSet
+	Set<Double> doubleSet = new HashSet<>();
 
-  // Singleton pattern
-  private static final Store instance = new Store();
+	@DataSet
+	protected Set<Date> dateSet = new HashSet<>();
 
-  private Store() {
-    super(Store.class); // dependency injection
-  }
+	// Singleton pattern
+	private static final Store instance = new Store();
 
-  public static synchronized Store getInstance() {
-    return instance;
-  }
+	private Store() {
+		super(Store.class); // dependency injection
+	}
+
+	public static synchronized Store getInstance() {
+		return instance;
+	}
 
 }
