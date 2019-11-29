@@ -5,9 +5,9 @@ import java.util.HashSet;
 import java.util.Set;
 import annote.DataSet;
 
+/** A basic implementation of the Abstract Store. Defines Data Sets **/
 public class Store extends AbstractStore {
 
-	// Data Store/Collections
 	// Important the Sets are not private to access via the AbstractStore
 
 	@DataSet
@@ -19,7 +19,7 @@ public class Store extends AbstractStore {
 	@DataSet(printSet = false)
 	Set<Double> doubleSet = new HashSet<>();
 
-	@DataSet
+	@DataSet(printSet = true) // default: same effect is not including 'printSet'
 	protected Set<Date> dateSet = new HashSet<>();
 
 	// Singleton pattern
