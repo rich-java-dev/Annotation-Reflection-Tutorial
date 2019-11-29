@@ -1,5 +1,6 @@
 package store;
 
+import java.lang.reflect.Field;
 import java.util.Set;
 
 import annote.AnnoteProcessor;
@@ -16,7 +17,7 @@ public class AbstractStore {
 	}
 
 	/*
-	 * Instances of Functional interface (Field/Method Process)ares implemented by
+	 * Instances of Functional interface (Field/Method Process) are implemented by
 	 * an anonymous class via lambda expressions, then passed (injected) into the
 	 * AnnoteProcessor.
 	 */
@@ -47,11 +48,16 @@ public class AbstractStore {
 
 	public void printSets() {
 		AnnoteProcessor.processFields(field -> {
+
 			Set<Object> dataSet = (Set<Object>) field.get(this); // Expecting that @DataSet is only used on Set<T>
-			System.out.println(field.getName() + ":"); // print the Fields name (as defined in the implementing class)
-			for (Object data : dataSet)
-				System.out.println(data); // print the elements of the Set
-			System.out.println();
+			if (field.getAnnotation(DataSet.class).printSet()) { // Do not print sets if printSet=False
+				System.out.println(field.getName() + ":"); // print the Fields name (as defined in the implementing
+															// class)
+				for (Object data : dataSet)
+					System.out.println(data); // print the elements of the Set
+				System.out.println();
+			}
+
 		}, implClass, DataSet.class);
 	}
 

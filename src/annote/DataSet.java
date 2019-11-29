@@ -8,4 +8,6 @@ import java.lang.annotation.RetentionPolicy;
  */
 @Retention(RetentionPolicy.RUNTIME)
 public @interface DataSet {
+
+	public boolean printSet() default true; // define a 'method', which behaves as an argument its usage at run-time
 }

@@ -8,8 +8,7 @@ import annote.DataSet;
 public class Store extends AbstractStore {
 
 	// Data Store/Collections
-	// Important the Sets are not public in order to access them via the
-	// AbstractStore
+	// Important the Sets are not private to access via the AbstractStore
 
 	@DataSet
 	protected Set<String> strSet = new HashSet<>();
@@ -17,7 +16,7 @@ public class Store extends AbstractStore {
 	@DataSet
 	protected Set<Integer> intSet = new HashSet<>();
 
-	@DataSet
+	@DataSet(printSet = false)
 	Set<Double> doubleSet = new HashSet<>();
 
 	@DataSet
