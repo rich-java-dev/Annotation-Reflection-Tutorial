@@ -27,7 +27,6 @@ public class Store extends AbstractStore {
   private static final Store instance = new Store();
 
   private Store() {
-    super(Store.class); // dependency injection
   }
 
   public static synchronized Store getInstance() {
