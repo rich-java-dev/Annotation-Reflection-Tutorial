@@ -19,7 +19,7 @@ public class Driver {
     store.push('c', 'h', 'a', 'r', 's', 's', 's'); // Set prevents multiple instances of same Object
 
     store.printSets();
-    store.clearSet();
+    store.clearSets(); // clears all elements in all Set<?>'s found in the class extending AbstractStore
   }
 
 }

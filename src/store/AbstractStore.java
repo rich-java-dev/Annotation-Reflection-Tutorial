@@ -11,7 +11,7 @@ public class AbstractStore {
    * Instances of Functional interface (Field/Method Process) are implemented by
    * an anonymous class via lambdas then passed to AnnoteProcessor.
    */
-  
+
   /**
    * Takes the generic arguments passed in and applies them to data sets defined
    * in the implementing class (if applicable)
@@ -50,7 +50,7 @@ public class AbstractStore {
     });
   }
 
-  public void clearSet() {
+  public void clearSets() {
     AnnoteProcessor.processFields(this.getClass(), DataSet.class, field -> { // process method here
       Set<Object> dataSet = (Set<Object>)field.get(this); // Expecting that @DataSet is only used on Set<T>
       dataSet.clear();
