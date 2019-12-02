@@ -41,13 +41,15 @@
 ### Line Count of source files:
   * git ls-files *.java | xargs wc -l
   * 44 src/annote/AnnoteProcessor.java
-  * 13 src/annote/DataSet.java
-  * 8 src/annote/FieldProcess.java
-  * 8 src/annote/MethodProcess.java
+  * 15 src/annote/DataSet.java
+  * 11 src/annote/FieldProcess.java
+  * 11 src/annote/MethodProcess.java
   * 24 src/core/Driver.java
-  * 66 src/store/AbstractStore.java
-  * 36 src/store/Store.java
+  * 59 src/store/AbstractStore.java
+  * 35 src/store/Store.java
   * 199 total
+
+
 
 
 ### Output of driver class (if unedited [warning: order elements' printed may change within a given Set]):
