@@ -7,7 +7,5 @@ import java.lang.reflect.Field;
  * The intended usage is to implement in an anonymous class via lambdas and pass to AnnoteProcessor
  */
 public interface FieldProcess {
-
   public void run(Field field) throws Exception;
-
 }
