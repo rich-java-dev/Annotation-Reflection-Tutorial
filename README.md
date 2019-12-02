@@ -46,28 +46,27 @@
   * 8 src/annote/MethodProcess.java
   * 24 src/core/Driver.java
   * 66 src/store/AbstractStore.java
-  * 33 src/store/Store.java
-  * 196 total
+  * 36 src/store/Store.java
+  * 199 total
 
-### Output of driver class (if unedited [warning: order may change of elements within a given Set]):
+
+### Output of driver class (if unedited [warning: order elements' printed may change within a given Set]):
 
 * strSet:
-  * Dependency Injection
   * This code example demonstrates how to build custom Data Framworks
+  * Some techniques you'll see include:
+  * Dependency Injection
   * Annotations
   * Lambda expressions
   * another string
   * Reflection
   * functional interfaces
-  * Some techniques you'll see include:
-
 * intSet:
    * 1
    * 2
    * 3
    * 4
    * 5
-
 * charSet:
   * a
   * r
